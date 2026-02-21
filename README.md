@@ -149,6 +149,7 @@ User posts comment
 │   └── register.html
 ├── .gitignore
 ├── 90minut_dump.sql
+├── LICENSE
 └── README.md
 
 ```
