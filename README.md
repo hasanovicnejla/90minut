@@ -1,10 +1,35 @@
 # 90minut  Football News Portal
+![PHP](https://img.shields.io/badge/PHP-8.3-blue)
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange)
+![JWT Auth](https://img.shields.io/badge/Auth-JWT-green)
+![Security Focus](https://img.shields.io/badge/Security-OWASP%20aware-red)
+![REST API](https://img.shields.io/badge/API-REST-lightgrey)
+![Status](https://img.shields.io/badge/Status-MVP-success)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 > Single-page football news platform built with PHP, FlightPHP, MySQL and vanilla JS. Implements JWT authentication, role-based access control, and security measures including bcrypt + pepper password hashing, PDO prepared statements against SQL injection, and XSS sanitization. REST API documented with OpenAPI 3.0 / Swagger UI.
 
+## Table of Contents
+
+|  |  |  |
+|---|---|---|
+| [Preview](#preview) | [Overview](#overview) | [Project Status](#project-status) |
+| [Tech Stack](#tech-stack) | [Security](#security) | [Features](#features) |
+| [Application Flow](#application-flow) | [Architecture](#architecture) | [Setup](#setup) |
+| [Walkthrough](#walkthrough) | [What I Learned](#what-i-learned) | [License](#license) |
+
+
+## Preview
+
+| Homepage | News Page |
+|---|---|
+| ![](readme_assets/homepage.png) | ![](readme_assets/news.png) |
+
+| Login | Admin Dashboard |
+|---|---|
+| ![](readme_assets/loginpage.png) | ![](readme_assets/admin_article_dashboard.png) |
+
 ## Overview
-
-
 **90minut** is a responsive, single-page football news portal. Think Klix.ba, but dedicated entirely to football. Visitors can browse articles by category, registered users can comment and manage their profile, and admins and moderators manage content through a dashboard.
 
 The application is built on FlightPHP as the REST backend, communicates entirely via AJAX, and follows a strict three-layer architecture. DAO, Service, and Presentation layers are kept completely separate, and the frontend interacts with the backend strictly through the REST API.
@@ -244,6 +269,12 @@ The most valuable part of this project wasn't any single feature. It was the dis
 On the technical side: building a REST API from scratch in FlightPHP meant understanding routing, middleware, and request lifecycle without a framework doing the heavy lifting. Implementing JWT properly and not just generating a token but validating it on every request, scoping it to roles, and handling expiration time made authentication feel concrete rather than abstract. Writing every database query as a prepared statement becomes second nature quickly, but understanding _why_ (and what a SQLi payload actually looks like against a vulnerable query) makes it stick.
 
 The security angle was the part I found most interesting. Applying OWASP Top 10 awareness to something I'd actually built  and being able to point to specific lines of code that address A01 (broken access control), A03 (injection, XSS), and A07 (authentication failures) is a different thing from knowing the list. Knowing OWASP categories is one thing. Having code in front of you where you can point to the exact line that prevents A03 is another.
+
+
+## License
+
+This project is open source and available under the MIT License.  
+Feel free to use it for learning, academic work, or as a foundation for your own projects.
 
 ----------
 
