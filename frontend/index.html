@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>90 Minut</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="./assets/css/profile.css" />
+    <link rel="stylesheet" href="./assets/css/slicknav.min.css" />
+
+    <link rel="stylesheet" href="./assets/css/admin-dashboard.css" />
+    <link rel="stylesheet" href="./assets/css/admin-articles.css" />
+    <link rel="stylesheet" href="./assets/css/admin-matches.css" />
+    <link rel="stylesheet" href="./assets/css/admin-leagues.css" />
+    <link rel="stylesheet" href="./assets/css/admin-users.css" />
+    <link rel="stylesheet" href="./assets/css/admin-analytics.css" />
+    <link rel="stylesheet" href="./assets/css/admin-marketing.css" />
+    <link rel="stylesheet" href="./assets/css/admin-settings.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.css">
+
+
+</head>
+<body>
+
+
+<header class="header-section-new" id="mainHeader">
+    <div class="header__nav-new">
+        <div class="container">
+            <div class="row align-items-center">
+
+            
+                <div class="col-lg-2 col-md-3 col-6">
+                    <div class="logo-new">
+                        <a href="#home" data-page="home">
+                            <img src="/90minut/frontend/assets/img/logo-dark.png" alt="90 Minut">
+                        </a>
+                    </div>
+                </div>
+
+               
+                <div class="col-lg-8 col-md-6 d-none d-lg-block">
+                    <nav class="nav-menu-new">
+                        <ul class="main-menu-new">
+                            <li class="active"><a href="#home" data-page="home">HOME</a></li>
+                            <li><a href="#club" data-page="club">LEAGUES</a></li>
+                            <li><a href="#results" data-page="results">RESULTS</a></li>
+                            <li><a href="#players" data-page="players">LATEST NEWS</a></li>
+                            <li><a href="#blog" data-page="blog">NEWS</a></li>
+                            <li><a href="#contact" data-page="contact">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-6">
+                    <div class="header-icons-new">
+
+                        <button class="theme-toggle" id="themeToggle">
+                            <i class="fa fa-lightbulb-o"></i>
+                        </button>
+
+                        <a href="#" class="search-icon-new search-switch">
+                            <i class="fa fa-search"></i>
+                        </a>
+
+                        <a href="/90minut/frontend/login.html" class="signin-link-new" id="loginLink">
+                            <span>Sign in</span>
+                        </a>
+
+                        <a href="#profile" class="profile-icon-new" id="profileIconNew" style="display:none;">
+                            <i class="fa fa-user"></i>
+                        </a>
+                        <a href="#admin-dashboard" id="adminDashboardBtn" class="admin-dash-btn" style="display:none;">
+                            <i class="fa fa-tachometer"></i> 
+                        </a>
+
+
+                        <span class="canvas-open-new">
+                            <i class="fa fa-bars"></i>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="offcanvas-menu-overlay"></div>
+<div class="offcanvas-menu-wrapper">
+    <div class="canvas-close"><i class="fa fa-close"></i></div>
+
+    <div class="search-btn search-switch"><i class="fa fa-search"></i></div>
+
+    <div class="header__top--canvas">
+        <ul>
+            <li><a href="/90minut/frontend/login.html" id="loginLinkMobile">Sign in</a></li>
+            <li>
+                <a href="#profile" data-page="profile" id="profileLink" style="display:none;">
+                    <i class="fa fa-user-circle"></i> 
+                </a>
+            </li>
+            <li>
+                <a href="#admin-dashboard" data-page="admin-dashboard" id="adminDashboardBtn" style="display:none;">
+                    <i class="fa fa-tachometer"></i> 
+                </a>
+
+
+            </li>
+        </ul>
+    </div>
+
+    <ul class="main-menu mobile-menu">
+        <li><a href="#home" data-page="home">Home</a></li>
+        <li><a href="#club" data-page="club">Club</a></li>
+        <li><a href="#schedule" data-page="schedule">Schedule</a></li>
+        <li><a href="#results" data-page="results">Results</a></li>
+        <li><a href="#players" data-page="players">Latest News</a></li>
+        <li><a href="#blog" data-page="blog">News</a></li>
+        <li><a href="#contact" data-page="contact">Contact Us</a></li>
+    </ul>
+
+    <div id="mobile-menu-wrap"></div>
+</div>
+
+
+<main id="app-content">
+    
+</main>
+
+<footer class="footer-section set-bg" data-setbg="/90minut/frontend/assets/img/footer-bg.jpg">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="fs-logo">
+                    <a href="#home" data-page="home">
+                        <img src="/90minut/frontend/assets/img/logo-dark.png" alt="">
+                    </a>
+                    <ul>
+                        <li><i class="fa fa-envelope"></i> Info.colorlib@gmail.com</li>
+                        <li><i class="fa fa-copy"></i> +(12) 345 6789 10</li>
+                        <li><i class="fa fa-thumb-tack"></i> 40 Baria Sreet 133/2 New York City</li>
+                    </ul>
+                    <div class="fs-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-tumblr"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 offset-lg-1">
+                <div class="fs-widget">
+                    <h4>Top Club</h4>
+                    <ul class="fw-links">
+                        <li><a href="#">Brazil</a></li>
+                        <li><a href="#">Germany</a></li>
+                        <li><a href="#">Italy</a></li>
+                        <li><a href="#">Argentina</a></li>
+                        <li><a href="#">France</a></li>
+                    </ul>
+                    <ul class="fw-links">
+                        <li><a href="#">England</a></li>
+                        <li><a href="#">Netherlands</a></li>
+                        <li><a href="#">Hungary</a></li>
+                        <li><a href="#">Croatia</a></li>
+                        <li><a href="#">Poland</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="fs-widget">
+                    <h4>Recent News</h4>
+                    <div class="fw-item">
+                        <h5><a href="#">England win shows they have spark</a></h5>
+                        <ul>
+                            <li><i class="fa fa-calendar"></i> May 19, 2019</li>
+                            <li><i class="fa fa-edit"></i> 3 Comment</li>
+                        </ul>
+                    </div>
+                    <div class="fw-item">
+                        <h5><a href="#">Sri Lanka v Australia – live!</a></h5>
+                        <ul>
+                            <li><i class="fa fa-calendar"></i> May 19, 2019</li>
+                            <li><i class="fa fa-edit"></i> 3 Comment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div class="copyright-option">
+                <p>
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script>
+                    All rights reserved | Template by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="search-model">
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <div class="search-close-switch"><i class="fa fa-close"></i></div>
+        <form class="search-model-form">
+            <input type="text" id="search-input" placeholder="Search here...">
+        </form>
+    </div>
+</div>
+
+
+<script src="./assets/js/jquery-3.3.1.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/jquery.slicknav.js"></script>
+<script src="./assets/js/owl.carousel.min.js"></script>
+<script src="./assets/js/jquery.magnific-popup.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
+<script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.js"></script>
+
+<script src="./utils/constants.js"></script>
+<script src="./utils/rest-client.js"></script>
+<script src="./utils/utils.js"></script>
+
+<script src="./services/user-service.js"></script>
+<script src="./services/article-service.js"></script>
+<script src="./services/article-detail-service.js"></script>
+<script src="./services/home-services.js"></script>
+<script src="./services/user-admin-service.js"></script>
+<script src="./services/latest-news-service.js"></script>
+<script src="./services/profile-service.js"></script>
+<script src="./services/contact-service.js"></script>
+<script src="./services/news-service.js"></script>
+
+<script src="./assets/js/profile-icon.js"></script>
+<script src="./assets/js/dashboard-button.js"></script>
+<script src="./assets/js/admin.js"></script>
+<script src="./assets/js/app.js"></script>
+
+
+</body>
+</html>

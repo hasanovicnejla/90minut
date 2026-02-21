@@ -1,0 +1,347 @@
+<div class="admin-wrapper">
+  <aside class="admin-sidebar" id="adminSidebar">
+    <div class="sidebar-header">
+      <img src="/90minut/frontend/assets/img/logo-dark.png" alt="90 Minut" class="sidebar-logo">
+      <h3>Admin Panel</h3>
+    </div>
+
+    <nav class="sidebar-nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#admin-dashboard" data-page="admin-dashboard">
+            <i class="fa fa-tachometer"></i><span>Dashboard</span>
+          </a>
+        </li>
+
+        <li class="nav-item active">
+          <a href="#admin-articles" data-page="admin-articles">
+            <i class="fa fa-newspaper-o"></i><span>Articles</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#admin-matches" data-page="admin-matches">
+            <i class="fa fa-calendar"></i><span>Matches</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#admin-leagues" data-page="admin-leagues">
+            <i class="fa fa-trophy"></i><span>Leagues</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#admin-users" data-page="admin-users">
+            <i class="fa fa-users"></i><span>Users</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#admin-analytics" data-page="admin-analytics">
+            <i class="fa fa-line-chart"></i><span>Analytics</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#admin-marketing" data-page="admin-marketing">
+            <i class="fa fa-bullhorn"></i><span>Marketing</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#admin-settings" data-page="admin-settings">
+            <i class="fa fa-cog"></i><span>Settings</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button class="btn-exit" onclick="window.location.href='/90minut/frontend/index.html'">
+        <i class="fa fa-sign-out"></i><span>Exit Admin</span>
+      </button>
+    </div>
+  </aside>
+
+  <main class="admin-main">
+
+    <header class="admin-header">
+      <div class="header-left">
+        <button class="sidebar-toggle" id="sidebarToggle">
+          <i class="fa fa-bars"></i>
+        </button>
+        <h1 class="page-title">Articles Management</h1>
+      </div>
+
+      <div class="header-right">
+        <button class="admin-theme-toggle" id="adminThemeToggle">
+          <i class="fa fa-sun-o"></i>
+        </button>
+
+        <div class="admin-profile">
+          <img src="/90minut/frontend/assets/img/avatar.png" alt="Admin" class="profile-avatar">
+          <span class="profile-name">Admin User</span>
+        </div>
+
+        <button class="btn-logout" onclick="UserService.logout()">
+          <i class="fa fa-sign-out"></i>
+        </button>
+      </div>
+    </header>
+
+    <div class="admin-content">
+
+      <div class="content-header">
+        <div class="header-actions">
+          <button class="btn-primary" onclick="ArticleService.openAddModal()">
+            <i class="fa fa-plus"></i>
+            <span>New Article</span>
+          </button>
+
+          <div class="search-box">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Search articles..." id="articleSearch">
+          </div>
+        </div>
+
+        <div class="filter-bar">
+          <select class="filter-select" id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="news">News</option>
+            <option value="match-report">Match Report</option>
+            <option value="transfer">Transfer News</option>
+            <option value="interview">Interview</option>
+          </select>
+
+          <select class="filter-select" id="statusFilter">
+            <option value="all">All Status</option>
+            <option value="1">Published</option>
+            <option value="0">Draft</option>
+          </select>
+
+          <select class="filter-select" id="sortFilter">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mini-stats-grid">
+        <div class="mini-stat-card">
+          <div class="mini-stat-icon blue">
+            <i class="fa fa-file-text"></i>
+          </div>
+          <div class="mini-stat-info">
+            <h4 id="totalArticles">0</h4>
+            <p>Total Articles</p>
+          </div>
+        </div>
+
+        <div class="mini-stat-card">
+          <div class="mini-stat-icon green">
+            <i class="fa fa-check-circle"></i>
+          </div>
+          <div class="mini-stat-info">
+            <h4 id="publishedArticles">0</h4>
+            <p>Published</p>
+          </div>
+        </div>
+
+        <div class="mini-stat-card">
+          <div class="mini-stat-icon orange">
+            <i class="fa fa-edit"></i>
+          </div>
+          <div class="mini-stat-info">
+            <h4 id="draftArticles">0</h4>
+            <p>Drafts</p>
+          </div>
+        </div>
+
+        <div class="mini-stat-card">
+          <div class="mini-stat-icon purple">
+            <i class="fa fa-eye"></i>
+          </div>
+          <div class="mini-stat-info">
+            <h4 id="totalViews">0</h4>
+            <p>Total Views</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-table-container">
+        <table class="data-table" id="articles-table">
+          <thead>
+            <tr>
+              <th>
+                <input type="checkbox" id="selectAll">
+              </th>
+              <th>Title</th>
+              <th>Category</th>
+              <th>Author</th>
+              <th>Status</th>
+              <th>League</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<div class="modal fade" id="addArticleModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title">New Article</h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <form id="add-article-form">
+        <div class="modal-body">
+
+          <div class="form-group">
+            <label>Title</label>
+            <input class="form-control" name="title" required minlength="3" maxlength="200" placeholder="Enter article title"/>
+          </div>
+
+          <div class="form-group">
+            <label>Content</label>
+            <textarea class="form-control" name="content" rows="5" required minlength="20"
+            placeholder="Enter article content (minimum 50 characters)"></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Category ID</label>
+              <input type="number" class="form-control" name="category_id" required min="1" placeholder="1-4" />
+            </div>
+
+            <div class="form-group col-md-6">
+              <label>Author ID</label>
+              <input type="number" class="form-control" name="author_id" required min="1" placeholder="Enter author ID"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>League ID</label>
+            <input type="number" class="form-control" name="league_id" required min="1" placeholder="Enter league ID" />
+          </div>
+
+          <div class="form-group">
+            <label>Image URL</label>
+            <input type="text" class="form-control" name="image_url" placeholder="https://example.com/image.jpg" />
+            <small class="form-text text-muted">Paste image URL from the internet (optional)</small>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-danger">Save</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editArticleModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit Article</h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <form id="edit-article-form">
+        <div class="modal-body">
+          <input type="hidden" name="article_id" />
+
+          <div class="form-group">
+            <label>Title</label>
+            <input class="form-control" name="title" required minlength="3" maxlength="200" placeholder="Enter article title"/>
+          </div>
+
+          <div class="form-group">
+            <label>Content</label>
+            <textarea class="form-control" name="content" rows="5" required minlength="20"
+            placeholder="Enter article content (minimum 20 characters)"></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Category ID</label>
+              <input type="number" class="form-control" name="category_id" required min="1" placeholder="1-4" />
+            </div>
+
+            <div class="form-group col-md-6">
+              <label>Author ID</label>
+              <input type="number" class="form-control" name="author_id" required min="1" placeholder="Enter author ID"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>League ID</label>
+            <input type="number" class="form-control" name="league_id" required min="1" placeholder="Enter league ID" />
+          </div>
+
+          <div class="form-group">
+            <label>Image URL</label>
+            <input type="text" class="form-control" name="image_url" placeholder="https://example.com/image.jpg" />
+            <small class="form-text text-muted">Paste image URL from the internet (optional)</small>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <input type="checkbox" name="published_at" value="1" />
+              Published
+            </label>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-danger">Save Changes</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="deleteArticleModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title">Delete Article</h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <input id="delete_article_id" name="id" type="hidden" />
+      <div class="modal-body" id="delete-article-body"></div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger" onclick="ArticleService.deleteArticle()">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  
+  $(document).ready(function() {
+    ArticleService.init();
+  });
+</script>

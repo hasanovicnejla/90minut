@@ -1,0 +1,90 @@
+<section class="latest-article-section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-8">
+
+                <h1 class="article-main-title" id="latest-article-title">
+                    Loading...
+                </h1>
+
+                <div class="article-meta-info">
+                    <div class="author-info">
+                        <div class="author-avatar">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div class="author-details">
+                            <span class="author-name">Piše: Admin</span>
+                            <span class="publish-time" id="latest-article-time"></span>
+                        </div>
+                    </div>
+
+                    <div class="article-stats">
+                        <span class="stat-item">
+                            <strong id="latest-comment-count">0</strong>
+                            <span>komentara</span>
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="article-main-image" id="latest-article-image-container">
+                    <img
+                        id="latest-article-image"
+                        src=""
+                        alt="Article image"
+                        onerror="this.src='/90minut/frontend/assets/img/blog/details/details-hero.jpg'"
+                    >
+                </div>
+
+                <div class="article-content-body" id="latest-article-content">
+                    <p>Loading article content...</p>
+                </div>
+                    <div class="comment-option">
+                        <h4>Comments (<span id="latest-total-comments">0</span>)</h4>
+
+                        <div id="latest-comments-list">
+                        </div>
+                    </div>
+
+                    <div class="comment-form" id="latest-comment-form-section">
+                        <h4>Leave a Comment</h4>
+
+                        <form id="latest-add-comment-form">
+                            <textarea name="content" placeholder="Your comment (minimum 10 characters)" required
+                         minlength="10" maxlength="1000" rows="5"></textarea>
+                            <button type="submit" class="primary-btn">Post Comment</button>
+                        </form>
+                    </div>
+                </div>
+
+            <div class="col-lg-4">
+                <div class="article-sidebar">
+
+                    <div class="sidebar-ad-widget">
+                        <div class="ad-label">ADVERTISEMENT</div>
+                        <div class="ad-banner-content">
+                            <img
+                                src="/90minut/frontend/assets/img/ads/commercial-ad-one.jpg"
+                                alt="Ad"
+                                onerror="this.src='https://via.placeholder.com/300x250/2d2d2d/ffffff?text=AD'"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="sidebar-ad-widget">
+                        <div class="ad-label">ADVERTISEMENT</div>
+                        <div class="ad-banner-content">
+                            <img
+                                src="/90minut/frontend/assets/img/ads/commercial-ad-two.jpg"
+                                alt="Ad"
+                                onerror="this.src='https://via.placeholder.com/300x600/2d2d2d/ffffff?text=AD'"
+                            >
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,146 @@
+/* === PROFILE PAGE – SAFE UI ONLY === */
+
+.profile-container {
+  min-height: 100vh;
+  background: #0f0f12;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 15px;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 600px;
+  background: #1a1a1f;
+  border-radius: 10px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.45);
+  overflow: hidden;
+}
+
+/* HEADER */
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 26px;
+  background: #141418;
+  border-bottom: 1px solid #2a2a32;
+}
+
+.profile-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.logout-btn {
+  background: #e74c3c;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+/* FORM BODY */
+.profile-form {
+  padding: 28px 26px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profile-form label {
+  font-size: 13px;
+  color: #b0b0b0;
+  margin-top: 10px;
+}
+
+.profile-form input {
+  padding: 11px 14px;
+  border-radius: 6px;
+  border: 1px solid #2f2f38;
+  background: #121217;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.profile-form input:focus {
+  outline: none;
+  border-color: #5865f2;
+}
+
+.profile-form input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* SAVE BUTTON */
+#saveProfileBtn {
+  margin-top: 26px;
+  align-self: flex-end;
+  background: #5865f2;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 36px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#saveProfileBtn:hover {
+  background: #4752c4;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .profile-card {
+    border-radius: 0;
+  }
+
+  #saveProfileBtn {
+    width: 100%;
+    align-self: stretch;
+  }
+}
+/* DELETE SECTION */
+.profile-delete {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #2a2a32;
+}
+
+.delete-warning {
+  color: #c2c2c2;
+  font-size: 13px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.delete-warning strong {
+  color: #e74c3c;
+}
+
+.delete-btn {
+  background: transparent;
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.delete-btn:hover {
+  background: #e74c3c;
+  color: #fff;
+}

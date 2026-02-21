@@ -1,0 +1,125 @@
+<section class="breadcrumb-section set-bg" data-setbg="/90minut/frontend/assets/img/breadcrumb-bg.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="bs-text">
+                    <h2>Top Leagues</h2>
+                    <p>Follow the world's best football competitions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="leagues-section spad">
+    <div class="container">
+
+        <div class="league-filter-tabs">
+            <button class="league-tab active" data-league="premier">
+                <i class="fa fa-shield"></i>
+                <span>Premier League</span>
+            </button>
+            <button class="league-tab" data-league="laliga">
+                <i class="fa fa-trophy"></i>
+                <span>La Liga</span>
+            </button>
+            <button class="league-tab" data-league="bundesliga">
+                <i class="fa fa-flag"></i>
+                <span>Bundesliga</span>
+            </button>
+            <button class="league-tab" data-league="seriea">
+                <i class="fa fa-star"></i>
+                <span>Serie A</span>
+            </button>
+            <button class="league-tab" data-league="ligue1">
+                <i class="fa fa-futbol-o"></i>
+                <span>Ligue 1</span>
+            </button>
+        </div>
+
+        <div class="league-content active" id="league-content">
+
+            <div class="league-header">
+                <div class="league-info">
+                    <div>
+                        <h2 id="league-name">Premier League</h2>
+                        <p class="league-subtitle" id="league-subtitle">England • 2024/25 Season</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-8">
+                    <div class="standings-card">
+
+                        <div class="card-header-custom">
+                            <h3><i class="fa fa-list-ol"></i> League Standings</h3>
+                        </div>
+
+                        <div class="standings-table-wrapper">
+                            <table class="standings-table">
+                                <thead>
+                                    <tr>
+                                        <th class="pos-col">#</th>
+                                        <th class="team-col">Team</th>
+                                        <th>P</th>
+                                        <th>W</th>
+                                        <th>D</th>
+                                        <th>L</th>
+                                        <th>GD</th>
+                                        <th class="pts-col">Pts</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="standings-table-body">
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="table-legend">
+                            <div class="legend-item">
+                                <span class="legend-color champions-league-color"></span>
+                                <span>Champions League</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color europa-league-color"></span>
+                                <span>Europa League</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="scorers-card">
+                        <div class="card-header-custom">
+                            <h3><i class="fa fa-futbol-o"></i> Top Scorers</h3>
+                        </div>
+
+                        <div class="scorers-list" id="top-scorers-list">
+                        
+                        </div>
+                    </div>
+
+                    <div class="stats-card">
+                        <div class="card-header-custom">
+                            <h3><i class="fa fa-bar-chart"></i> League Stats</h3>
+                        </div>
+
+                        <div class="stats-list">
+                            <div class="stat-item"><span class="stat-label">Total Goals</span><span class="stat-value">287</span></div>
+                            <div class="stat-item"><span class="stat-label">Avg Goals/Game</span><span class="stat-value">2.8</span></div>
+                            <div class="stat-item"><span class="stat-label">Clean Sheets</span><span class="stat-value">45</span></div>
+                            <div class="stat-item"><span class="stat-label">Yellow Cards</span><span class="stat-value">234</span></div>
+                            <div class="stat-item"><span class="stat-label">Red Cards</span><span class="stat-value">12</span></div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
