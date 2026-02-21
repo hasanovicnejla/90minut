@@ -99,6 +99,11 @@ Permissions are enforced server-side through middleware and service-layer checks
 ## Application Flow
 
 ```
+
+A user action in the browser triggers an AJAX call, which hits the FlightPHP router, 
+passes through JWT middleware, reaches the service layer for business logic, which calls 
+the DAO layer for database access, and a JSON response comes back the same way.
+
 User registers
   → password + pepper → bcrypt hash → stored in DB
   → plaintext never persisted
