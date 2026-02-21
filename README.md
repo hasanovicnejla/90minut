@@ -139,7 +139,7 @@ User posts comment
 **1. Clone**
 
 ```bash
-git clone https://github.com/yourusername/90minut.git
+git clone https://github.com/hasanovicnejla/90minut.git
 ```
 
 **2. Move to WAMP web root**
