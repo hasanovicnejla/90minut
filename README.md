@@ -53,7 +53,8 @@ The current state reflects a functional and stable MVP with additional features 
 -   **SQL Injection Prevention:** Every database query uses PDO prepared statements with parameterized inputs. No user input concatenated into SQL strings.  
     _→ All DAO classes in `backend/rest/dao/`_
     
--   **XSS Protection:** Centralized `Utils.escapeHtml()` sanitizes all user-generated content before DOM insertion like comments, usernames, article titles, excerpts.  
+-   **XSS Protection:** All user-generated content is sanitized before being inserted into the DOM using a centralized Utils.escapeHtml() utility function.
+This includes comments, usernames, article titles, and excerpts.  
     _→ `frontend/utils/utils.js`, applied in `article-detail-service.js`, `home-services.js`, `latest-news-service.js`, `news-service.js`_
     
 - **Defense-in-Depth Validation:** Inputs are validated on both client and server layers, ensuring UX feedback while preventing trust in client-side enforcement.
